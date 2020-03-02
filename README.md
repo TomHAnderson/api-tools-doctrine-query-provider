@@ -102,7 +102,7 @@ Example
 namespace DbApi\QueryProvider;
 
 use ZF\Rest\ResourceEvent;
-use ApiTools\Doctrine\QueryProvider\AbstractORMQueryProvider;
+use Laminas\ApiTools\Doctrine\QueryProvider\AbstractORMQueryProvider;
 use Db\Fixture\RoleFixture;
 
 final class PerformanceCorrectionPatch extends AbstractQueryProvider

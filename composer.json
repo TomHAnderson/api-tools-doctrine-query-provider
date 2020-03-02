@@ -1,0 +1,13 @@
+{
+    "name": "tom.h.anderson/api-tools-doctrine-query-provider",
+    "description": "Proposed Laminas repository to replace querybuilder",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Tom H Anderson",
+            "email": "tom.h.anderson@gmail.com"
+        }
+    ],
+    "require": {}
+}
