@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Tools\Doctrine\QueryProvider;
+namespace Laminas\ApiTools\Doctrine\QueryProvider;
 
 return [
     'api-tools-doctrine-query-provider' => [
