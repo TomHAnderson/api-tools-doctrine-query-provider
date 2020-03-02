@@ -53,7 +53,7 @@ return [
     /* ... */
     'modules' => [
         /* ... */
-        'Laminas\ApiTools\Doctrine\QueryBuilder',
+        'Laminas\ApiTools\Doctrine\QueryProvider',
     ],
     /* ... */
 ];
@@ -72,12 +72,12 @@ return [
         'doctrine-connected' => [
             V1\Rest\PerformanceMerge\PerformanceMergeResource::class => [
                 'query_providers' => [
-  //                  'default' => Query\Provider\PerformanceMergeDefault::class,
-                    'fetch' => Query\Provider\PerformanceMergeFetch::class,
-                    'fetch_all' => Query\Provider\PerformanceMergeFetch::class,
-                    'patch' => Query\Provider\PerformanceMergePatch::class,
-                    'update' => Query\Provider\PerformanceMergeUpdate::class,
-                    'delete' => Query\Provider\PerformanceMergeDelete::class,
+  //                  'default' => QueryProvider\PerformanceMergeDefault::class, // applies to all 
+                    'fetch' => QueryProvider\PerformanceMergeFetch::class,
+                    'fetch_all' => QueryProvider\PerformanceMergeFetch::class,
+                    'patch' => QueryProvider\PerformanceMergePatch::class,
+                    'update' => QueryProvider\PerformanceMergeUpdate::class,
+                    'delete' => QueryProvider\PerformanceMergeDelete::class,
                 ],
             ],
 ```
@@ -99,10 +99,10 @@ Example
 -------
 
 ```php
-namespace DbApi\Query\Provider;
+namespace DbApi\QueryProvider;
 
 use ZF\Rest\ResourceEvent;
-use ApiTools\Doctrine\Query\Provider\AbstractORMQueryProvider;
+use ApiTools\Doctrine\QueryProvider\AbstractORMQueryProvider;
 use Db\Fixture\RoleFixture;
 
 final class PerformanceCorrectionPatch extends AbstractQueryProvider
